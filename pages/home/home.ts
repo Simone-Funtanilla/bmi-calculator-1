@@ -1,14 +1,20 @@
+import { Component } from '@angular/core';
+import { NavController } from 'ionic-angular';
+
+@Component ({
+  selector: 'page-home',
+  templateUrl: 'home.html'
+})
 export class Homepage {
   height: number;
   weight: number;
-  bmi: number;
+  bmi:number;
   bmiMessage: string;
- 
- calculateBMI() {
+ calculateBMI(){
    this.bmi = this.weight / (this.height * this.height);
    this.bmi = parseFloat(this.bmi.toFixed(2));
 
-   if (this.bmi <18.5) {
+   if (this.bmi < 18.5) {
      this.bmiMessage = "underweight";
    } else if (this.bmi > 18.5 && this.bmi < 25) {
      this.bmiMessage = "Normal";
