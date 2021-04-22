@@ -17,6 +17,6 @@ export class Homepage {
    } else { 
      this.bmiMessage = "obese"; 
    }
- }
+}
 }
 
